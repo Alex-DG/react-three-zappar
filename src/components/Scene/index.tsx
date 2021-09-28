@@ -6,7 +6,8 @@ const Scene = () => {
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    if (ref) Experience.init(ref.current)
+    Experience.init(ref.current)
+    return () => Experience.dispose()
   }, [ref])
 
   return <div id="experience" ref={ref}></div>

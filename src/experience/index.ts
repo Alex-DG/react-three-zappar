@@ -5,8 +5,14 @@ import faceTextureTemplate from '../assets/faceMeshTemplate.png'
 
 class Experience {
   private camera!: ZapparThree.Camera
+
   private faceTrackerGroup!: ZapparThree.FaceAnchorGroup
+  private faceMeshMesh!: THREE.Mesh
+  private faceMaterial!: THREE.MeshStandardMaterial
   private faceBufferGeometry!: ZapparThree.FaceBufferGeometry
+
+  private directionalLight!: THREE.DirectionalLight
+  private ambientLight!: THREE.AmbientLight
 
   private renderer!: THREE.WebGLRenderer
   private scene!: THREE.Scene
@@ -36,13 +42,13 @@ class Experience {
   }
 
   private setLight() {
-    const directionalLight = new THREE.DirectionalLight('white', 0.8)
-    directionalLight.position.set(0, 5, 0)
-    directionalLight.lookAt(0, 0, 0)
+    this.directionalLight = new THREE.DirectionalLight('white', 0.8)
+    this.directionalLight.position.set(0, 5, 0)
+    this.directionalLight.lookAt(0, 0, 0)
 
-    const ambeintLight = new THREE.AmbientLight('white', 0.4)
+    this.ambientLight = new THREE.AmbientLight('white', 0.4)
 
-    this.scene.add(directionalLight, ambeintLight)
+    this.scene.add(this.directionalLight, this.ambientLight)
   }
 
   private setFace() {
@@ -65,16 +71,18 @@ class Experience {
     const faceTexture = textureLoader.load(faceTextureTemplate)
     faceTexture.flipY = true
 
+    this.faceMaterial = new THREE.MeshStandardMaterial({
+      map: faceTexture,
+      transparent: true,
+    })
+
     // Construct a THREE Mesh object from our geometry and texture, and add it to our tracker group
-    const faceMeshMesh = new THREE.Mesh(
+    this.faceMeshMesh = new THREE.Mesh(
       this.faceBufferGeometry,
-      new THREE.MeshStandardMaterial({
-        map: faceTexture,
-        transparent: true,
-      })
+      this.faceMaterial
     )
 
-    this.faceTrackerGroup.add(faceMeshMesh)
+    this.faceTrackerGroup.add(this.faceMeshMesh)
 
     this.faceTrackerGroup.faceTracker.onVisible.bind(() => {
       this.faceTrackerGroup.visible = true
@@ -100,6 +108,23 @@ class Experience {
     this.renderer.render(this.scene, this.camera)
 
     requestAnimationFrame(this.render.bind(this))
+  }
+
+  public dispose() {
+    const shouldDispose =
+      !!this.faceMaterial &&
+      !!this.faceBufferGeometry &&
+      !!this.scene &&
+      !!this.directionalLight &&
+      !!this.ambientLight
+
+    if (shouldDispose) {
+      this.faceMaterial.dispose()
+      this.faceBufferGeometry.dispose()
+
+      this.faceTrackerGroup.remove(this.faceMeshMesh)
+      this.scene.remove(this.directionalLight, this.ambientLight)
+    }
   }
 
   public init(targetElement: HTMLDivElement | null) {
