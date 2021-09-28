@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "./static/css/main.6f864a82.chunk.css",
+    "main.js": "./static/js/main.c1bd1c4f.chunk.js",
+    "main.js.map": "./static/js/main.c1bd1c4f.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.89f174c3.js",
+    "runtime-main.js.map": "./static/js/runtime-main.89f174c3.js.map",
+    "static/js/2.09b7d4cc.chunk.js": "./static/js/2.09b7d4cc.chunk.js",
+    "static/js/2.09b7d4cc.chunk.js.map": "./static/js/2.09b7d4cc.chunk.js.map",
+    "static/js/3.d0b399ee.chunk.js": "./static/js/3.d0b399ee.chunk.js",
+    "static/js/3.d0b399ee.chunk.js.map": "./static/js/3.d0b399ee.chunk.js.map",
+    "face_tracking_model.zbin": "./482727c0e7dd40d73f5aae47f238ad61.zbin",
+    "face_mesh_face_model.zbin": "./b4f46e148a3b3b5aef90717d8d60e3fc.zbin",
+    "face_mesh_full_head_simplified_model.zbin": "./f7b62a3a53b5c9b3222ba8dc53cb8b11.zbin",
+    "index.html": "./index.html",
+    "static/css/main.6f864a82.chunk.css.map": "./static/css/main.6f864a82.chunk.css.map",
+    "static/js/2.09b7d4cc.chunk.js.LICENSE.txt": "./static/js/2.09b7d4cc.chunk.js.LICENSE.txt",
+    "static/js/worker.33760b9b.worker.js": "./static/js/worker.33760b9b.worker.js",
+    "static/js/worker.33760b9b.worker.js.map": "./static/js/worker.33760b9b.worker.js.map",
+    "static/js/zcv.wasm": "./static/js/zcv.wasm",
+    "static/media/faceMeshTemplate.6e15d49f.png": "./static/media/faceMeshTemplate.6e15d49f.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.89f174c3.js",
+    "static/js/2.09b7d4cc.chunk.js",
+    "static/css/main.6f864a82.chunk.css",
+    "static/js/main.c1bd1c4f.chunk.js"
+  ]
+}
