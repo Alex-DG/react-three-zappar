@@ -6,7 +6,7 @@ import Scene from './components/Scene'
 const App = () => {
   const [granted, setGranted] = useState(false)
 
-  const handleClick = () => {
+  const handleZapparPermission = () => {
     ZapparThree.permissionRequest().then((granted) => {
       if (granted) setGranted(true)
       else ZapparThree.permissionDeniedUI()
@@ -17,7 +17,7 @@ const App = () => {
 
   return (
     <div className="splash-screen">
-      <button onClick={handleClick}>Allow Camera</button>
+      <button onClick={() => handleZapparPermission()}>Allow Camera</button>
     </div>
   )
 }
