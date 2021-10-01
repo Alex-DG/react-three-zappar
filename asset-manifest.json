@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "./static/js/main.b6c1b704.chunk.js",
-    "main.js.map": "./static/js/main.b6c1b704.chunk.js.map",
+    "main.js": "./static/js/main.e08e22d0.chunk.js",
+    "main.js.map": "./static/js/main.e08e22d0.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.274e0ecb.js",
     "runtime-main.js.map": "./static/js/runtime-main.274e0ecb.js.map",
     "static/js/2.9ddcbd48.chunk.js": "./static/js/2.9ddcbd48.chunk.js",
@@ -16,11 +16,11 @@
     "static/js/worker.33760b9b.worker.js": "./static/js/worker.33760b9b.worker.js",
     "static/js/worker.33760b9b.worker.js.map": "./static/js/worker.33760b9b.worker.js.map",
     "static/js/zcv.wasm": "./static/js/zcv.wasm",
-    "static/media/faceMeshTemplate.6e15d49f.png": "./static/media/faceMeshTemplate.6e15d49f.png"
+    "static/media/faceMeshTemplate.7c10f762.png": "./static/media/faceMeshTemplate.7c10f762.png"
   },
   "entrypoints": [
     "static/js/runtime-main.274e0ecb.js",
     "static/js/2.9ddcbd48.chunk.js",
-    "static/js/main.b6c1b704.chunk.js"
+    "static/js/main.e08e22d0.chunk.js"
   ]
 }
