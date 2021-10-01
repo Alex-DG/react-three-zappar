@@ -9,46 +9,62 @@ type Options = {
   targetElement: HTMLDivElement | null | undefined
 }
 
-export type Configuration = {
+type Configuration = {
   pixelRatio: number
   width: number
   height: number
 }
-export default class Experience {
+
+class Experience {
   static instance: Experience
 
   public targetElement!: HTMLDivElement | null | undefined
   public config!: Configuration
   public scene!: THREE.Scene
-  public camera!: Camera
   public renderer!: Renderer
+  public camera!: Camera
   public world!: World
 
   constructor(options?: Options) {
+    // AR compatibility check
     if (ZapparThree.browserIncompatible()) {
       ZapparThree.browserIncompatibleUI()
       throw new Error('Unsupported browser')
     }
 
+    // Singleton pattern
     if (Experience.instance) {
       return Experience.instance
     }
     Experience.instance = this
 
+    // DOM
     this.targetElement = options?.targetElement
 
-    if (!this.targetElement) throw new Error("Missing 'targetElement' property")
+    if (!this.targetElement) {
+      console.warn("Missing 'targetElement' property")
+      return
+    }
 
-    console.log('Start experience....')
-
-    this.setConfig()
-    this.setResize()
+    // Intialising experience
     this.setScene()
     this.setCamera()
+    this.setConfig()
     this.setRenderer()
     this.setWorld()
+    this.setResize()
 
     this.update()
+  }
+
+  private setWorld() {
+    this.world = new World()
+  }
+
+  private setCamera() {
+    this.camera = new Camera()
+    this.camera.instance.start(true)
+    this.scene.background = this.camera.instance.backgroundTexture
   }
 
   private setConfig() {
@@ -67,33 +83,25 @@ export default class Experience {
     this.config.height = boundings?.height || window.innerHeight
   }
 
+  private setScene() {
+    this.scene = new THREE.Scene()
+  }
+
   private setResize() {
     this.targetElement?.addEventListener('resize', () => {
       const boundings = this.targetElement?.getBoundingClientRect()
       this.config.width = boundings?.width || window.innerWidth
       this.config.height = boundings?.height || window.innerHeight
 
-      this.world.resize()
+      // this.world.resize()
       this.renderer.resize()
     })
-  }
-
-  private setScene() {
-    this.scene = new THREE.Scene()
-  }
-
-  private setCamera() {
-    this.camera = new Camera()
   }
 
   private setRenderer() {
     this.renderer = new Renderer()
     this.targetElement?.appendChild(this.renderer.instance.domElement)
     ZapparThree.glContextSet(this.renderer.instance.getContext())
-  }
-
-  private setWorld() {
-    this.world = new World()
   }
 
   private update() {
@@ -105,6 +113,8 @@ export default class Experience {
   }
 
   public destroy() {
-    this.world.destroy()
+    if (this.world) this.world.destroy()
   }
 }
+
+export default Experience

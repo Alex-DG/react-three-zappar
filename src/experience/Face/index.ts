@@ -2,15 +2,12 @@ import * as THREE from 'three'
 import * as ZapparThree from '@zappar/zappar-threejs'
 
 import Experience from '..'
-import Camera from '../camera'
 
 import faceTextureTemplate from '../../assets/faceMeshTemplate.png'
 import Lights from './lights'
 
 export default class Face {
   private experience: Experience
-  private scene: THREE.Scene
-  private camera: Camera
   private lights!: Lights
 
   private faceMaterial!: THREE.MeshStandardMaterial
@@ -19,13 +16,8 @@ export default class Face {
   public faceTrackerGroup!: ZapparThree.FaceAnchorGroup
   public faceMeshMesh!: THREE.Mesh
 
-  //   private directionalLight!: THREE.DirectionalLight
-  //   private ambientLight!: THREE.AmbientLight
-
   constructor() {
     this.experience = new Experience()
-    this.scene = this.experience.scene
-    this.camera = this.experience.camera
 
     this.setLights()
     this.setFace()
@@ -34,7 +26,11 @@ export default class Face {
 
   private setLights() {
     this.lights = new Lights()
-    this.scene.add(this.lights.directionalLight, this.lights.ambientLight)
+
+    this.experience.scene.add(
+      this.lights.directionalLight,
+      this.lights.ambientLight
+    )
   }
 
   private setVisibility() {
@@ -55,10 +51,10 @@ export default class Face {
 
     // Tracker group
     this.faceTrackerGroup = new ZapparThree.FaceAnchorGroup(
-      this.camera.instance,
+      this.experience.camera.instance,
       faceTracker
     )
-    this.scene.add(this.faceTrackerGroup)
+    this.experience.scene.add(this.faceTrackerGroup)
 
     // Face Mesh
     const faceMesh = new ZapparThree.FaceMeshLoader(manager).load()
@@ -95,14 +91,18 @@ export default class Face {
       !!this.faceMaterial &&
       !!this.faceBufferGeometry &&
       !!this.lights &&
-      !!this.scene
+      !!this.experience.scene
 
     if (shouldDispose) {
       this.faceMaterial.dispose()
       this.faceBufferGeometry.dispose()
 
       this.faceTrackerGroup.remove(this.faceMeshMesh)
-      this.scene.remove(this.lights.directionalLight, this.lights.ambientLight)
+
+      this.experience.scene.remove(
+        this.lights.directionalLight,
+        this.lights.ambientLight
+      )
     }
   }
 }
