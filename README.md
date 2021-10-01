@@ -1,4 +1,4 @@
-# React Three with Zappar AR
+# ✨ React ThreeJS with Zappar AR ✨
 
 ​
 This repository contains an AR example using the Zappar SDK.This specific example uses `react-scripts` to compile and bundle the assets and code, and TypeScript to get full auto-complete and compile-time error checking.
@@ -6,24 +6,33 @@ This repository contains an AR example using the Zappar SDK.This specific exampl
 To learn more about [Zappar AR](https://docs.zap.works/universal-ar/)
 ​
 
-## Running the Project
+## 🚧 WIP 🚧
+
+- AR Camera hot reload
+- [React-Helemt](https://github.com/nfl/react-helmet)/custom dom head
+- [Styled-Components](https://styled-components.com/)
+- Test
+
+## 🏃🏼 Running the Project 🏃🏼
 
 ​
 Once you have cloned this repository, open a terminal in the root directory of this project and follow these steps to get started.
 ​
-Install the dependencies by running:
-​
+
+- Install the dependencies by running:
+  ​
 
 ```bash
-npm install
+npm i
 ```
 
 ​
-Next, run the project using the following command:
-​
+
+- Next, run the project using the following command:
+  ​
 
 ```bash
-npm start
+npm run start
 ```
 
 ​
@@ -35,3 +44,9 @@ It's recommended to launch this project on a mobile device to get the best user 
 1. Ensure the device is on the same local network (e.g. Wifi)
 2. Find out the IP address of your computer
 3. On your mobile device, visit: `https://YOUR-IP-ADDRESS:PORT` replacing both `YOUR-IP-ADDRESS` and `PORT` (the port is the number after the `:` in the address given by `webpack-dev-server`). Note it's important to type `https` at the start of the address to ensure your device connects over HTTP**S**.
+
+- Create optmised production build:
+
+```bash
+npm run build
+```
