@@ -8,7 +8,14 @@ export default class Renderer {
 
   constructor() {
     this.experience = new Experience()
+
+    this.removeDomElement()
     this.setInstance()
+  }
+
+  private removeDomElement() {
+    const canvas = document.querySelector('canvas')
+    if (canvas) document.getElementById('experience')?.removeChild(canvas)
   }
 
   private setInstance() {

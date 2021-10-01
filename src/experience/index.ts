@@ -18,6 +18,8 @@ type Configuration = {
 class Experience {
   static instance: Experience
 
+  private isRunning = false
+
   public targetElement!: HTMLDivElement | null | undefined
   public config!: Configuration
   public scene!: THREE.Scene
@@ -26,7 +28,7 @@ class Experience {
   public world!: World
 
   constructor(options?: Options) {
-    // :: AR compatibility check ::
+    // :: AR compatibility check ::.
     if (ZapparThree.browserIncompatible()) {
       ZapparThree.browserIncompatibleUI()
       throw new Error('Unsupported browser')
@@ -47,9 +49,6 @@ class Experience {
     }
 
     // :: Intialising experience ::
-
-    console.log('[ Initialising experience...]')
-
     this.setScene()
     this.setCamera()
     this.setConfig()
@@ -57,6 +56,9 @@ class Experience {
     this.setWorld()
     this.setResize()
 
+    this.isRunning = true
+
+    console.log('Starting experience...')
     this.update()
   }
 
@@ -108,15 +110,22 @@ class Experience {
   }
 
   private update() {
-    this.camera?.update()
-    this.world?.update()
-    this.renderer?.update()
+    if (this.isRunning) {
+      this.camera?.update()
+      this.world?.update()
+      this.renderer?.update()
 
-    requestAnimationFrame(this.update.bind(this))
+      requestAnimationFrame(this.update.bind(this))
+    }
   }
 
   public destroy() {
+    this.stop()
     this.world?.destroy()
+  }
+
+  public stop() {
+    this.isRunning = false
   }
 }
 

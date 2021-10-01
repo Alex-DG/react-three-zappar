@@ -21,7 +21,6 @@ export default class World {
     // const parent = document.getElementById('experience')
     // const child = document.querySelector('canvas')
     // parent && child && parent.removeChild(child)
-
     this.face.destroy()
   }
 }
