@@ -26,19 +26,19 @@ class Experience {
   public world!: World
 
   constructor(options?: Options) {
-    // AR compatibility check
+    // :: AR compatibility check ::
     if (ZapparThree.browserIncompatible()) {
       ZapparThree.browserIncompatibleUI()
       throw new Error('Unsupported browser')
     }
 
-    // Singleton pattern
+    // :: Singleton pattern ::
     if (Experience.instance) {
       return Experience.instance
     }
     Experience.instance = this
 
-    // DOM
+    // :: DOM ::
     this.targetElement = options?.targetElement
 
     if (!this.targetElement) {
@@ -46,7 +46,7 @@ class Experience {
       return
     }
 
-    // Intialising experience
+    // :: Intialising experience ::
     this.setScene()
     this.setCamera()
     this.setConfig()
@@ -93,7 +93,7 @@ class Experience {
       this.config.width = boundings?.width || window.innerWidth
       this.config.height = boundings?.height || window.innerHeight
 
-      // this.world.resize()
+      this.world.resize()
       this.renderer.resize()
     })
   }
@@ -105,15 +105,15 @@ class Experience {
   }
 
   private update() {
-    if (this.camera) this.camera.update()
-    if (this.world) this.world.update()
-    if (this.renderer) this.renderer.update()
+    this.camera?.update()
+    this.world?.update()
+    this.renderer?.update()
 
     requestAnimationFrame(this.update.bind(this))
   }
 
   public destroy() {
-    if (this.world) this.world.destroy()
+    this.world?.destroy()
   }
 }
 
