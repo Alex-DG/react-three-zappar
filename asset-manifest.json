@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "./static/js/main.dd4470e8.chunk.js",
-    "main.js.map": "./static/js/main.dd4470e8.chunk.js.map",
+    "main.js": "./static/js/main.a9f4c139.chunk.js",
+    "main.js.map": "./static/js/main.a9f4c139.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.274e0ecb.js",
     "runtime-main.js.map": "./static/js/runtime-main.274e0ecb.js.map",
-    "static/js/2.9ddcbd48.chunk.js": "./static/js/2.9ddcbd48.chunk.js",
-    "static/js/2.9ddcbd48.chunk.js.map": "./static/js/2.9ddcbd48.chunk.js.map",
+    "static/js/2.051beeb6.chunk.js": "./static/js/2.051beeb6.chunk.js",
+    "static/js/2.051beeb6.chunk.js.map": "./static/js/2.051beeb6.chunk.js.map",
     "static/js/3.b1591633.chunk.js": "./static/js/3.b1591633.chunk.js",
     "static/js/3.b1591633.chunk.js.map": "./static/js/3.b1591633.chunk.js.map",
     "face_tracking_model.zbin": "./482727c0e7dd40d73f5aae47f238ad61.zbin",
     "face_mesh_face_model.zbin": "./b4f46e148a3b3b5aef90717d8d60e3fc.zbin",
     "face_mesh_full_head_simplified_model.zbin": "./f7b62a3a53b5c9b3222ba8dc53cb8b11.zbin",
     "index.html": "./index.html",
-    "static/js/2.9ddcbd48.chunk.js.LICENSE.txt": "./static/js/2.9ddcbd48.chunk.js.LICENSE.txt",
+    "static/js/2.051beeb6.chunk.js.LICENSE.txt": "./static/js/2.051beeb6.chunk.js.LICENSE.txt",
     "static/js/worker.33760b9b.worker.js": "./static/js/worker.33760b9b.worker.js",
     "static/js/worker.33760b9b.worker.js.map": "./static/js/worker.33760b9b.worker.js.map",
     "static/js/zcv.wasm": "./static/js/zcv.wasm",
@@ -20,7 +20,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.274e0ecb.js",
-    "static/js/2.9ddcbd48.chunk.js",
-    "static/js/main.dd4470e8.chunk.js"
+    "static/js/2.051beeb6.chunk.js",
+    "static/js/main.a9f4c139.chunk.js"
   ]
 }
