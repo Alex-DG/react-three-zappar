@@ -7,7 +7,7 @@ To learn more about [Zappar AR](https://docs.zap.works/universal-ar/)
 ## 🚧 WIP 🚧
 
 - AR Camera hot reload
-- [React-Helemt](https://github.com/nfl/react-helmet)/custom dom head
+- [React-Helmet](https://github.com/nfl/react-helmet)/custom dom head
 - ~~[Styled-Components](https://styled-components.com/)~~
 - Test
 
