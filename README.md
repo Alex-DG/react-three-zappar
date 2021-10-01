@@ -1,4 +1,4 @@
-# ✨ React ThreeJS with Zappar AR ✨
+# ✨ SPA - React ThreeJS with Zappar AR ✨
 
 This repository contains an AR example using the Zappar SDK.This specific example uses `react-scripts` to compile and bundle the assets and code, and TypeScript to get full auto-complete and compile-time error checking.
 
