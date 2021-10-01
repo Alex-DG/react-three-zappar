@@ -47,6 +47,9 @@ class Experience {
     }
 
     // :: Intialising experience ::
+
+    console.log('[ Initialising experience...]')
+
     this.setScene()
     this.setCamera()
     this.setConfig()
@@ -105,6 +108,7 @@ class Experience {
   }
 
   private update() {
+    console.log('update')
     this.camera?.update()
     this.world?.update()
     this.renderer?.update()

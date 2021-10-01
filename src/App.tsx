@@ -8,7 +8,6 @@ const App = () => {
   const [granted, setGranted] = useState(false)
 
   const handleZapparPermission = () => {
-    console.log('object')
     ZapparThree.permissionRequest().then((granted) => {
       if (granted) setGranted(true)
       else ZapparThree.permissionDeniedUI()
