@@ -5,29 +5,21 @@ import Camera from './camera'
 import Renderer from './renderer'
 import World from './world'
 
-type Options = {
-  targetElement: HTMLDivElement | null | undefined
-}
-
-type Configuration = {
-  pixelRatio: number
-  width: number
-  height: number
-}
+import { ExperienceConfig, ExperienceOptions } from '../config/types'
 
 class Experience {
   static instance: Experience
 
   private isRunning = false
 
-  public targetElement!: HTMLDivElement | null | undefined
-  public config!: Configuration
+  public targetElement!: HTMLDivElement
+  public config!: ExperienceConfig
   public scene!: THREE.Scene
   public renderer!: Renderer
   public camera!: Camera
   public world!: World
 
-  constructor(options?: Options) {
+  constructor(options?: ExperienceOptions) {
     // :: AR compatibility check ::.
     if (ZapparThree.browserIncompatible()) {
       ZapparThree.browserIncompatibleUI()
@@ -40,13 +32,13 @@ class Experience {
     }
     Experience.instance = this
 
-    // :: DOM ::
-    this.targetElement = options?.targetElement
-
-    if (!this.targetElement) {
+    if (!options?.targetElement) {
       console.warn("Missing 'targetElement' property")
       return
     }
+
+    // :: DOM ::
+    this.targetElement = options?.targetElement
 
     // :: Intialising experience ::
     this.setScene()
@@ -83,9 +75,9 @@ class Experience {
     this.config.pixelRatio = Math.min(Math.max(window.devicePixelRatio, 1), 2)
 
     // Width and height
-    const boundings = this.targetElement?.getBoundingClientRect()
-    this.config.width = boundings?.width || window.innerWidth
-    this.config.height = boundings?.height || window.innerHeight
+    const boundings = this.targetElement.getBoundingClientRect()
+    this.config.width = boundings.width || window.innerWidth
+    this.config.height = boundings.height || window.innerHeight
   }
 
   private setScene() {
@@ -94,9 +86,9 @@ class Experience {
 
   private setResize() {
     window.addEventListener('resize', () => {
-      const boundings = this.targetElement?.getBoundingClientRect()
-      this.config.width = boundings?.width || window.innerWidth
-      this.config.height = boundings?.height || window.innerHeight
+      const boundings = this.targetElement.getBoundingClientRect()
+      this.config.width = boundings.width || window.innerWidth
+      this.config.height = boundings.height || window.innerHeight
 
       this.world.resize()
       this.renderer.resize()
@@ -105,7 +97,7 @@ class Experience {
 
   private setRenderer() {
     this.renderer = new Renderer()
-    this.targetElement?.appendChild(this.renderer.instance.domElement)
+    this.targetElement.appendChild(this.renderer.instance.domElement)
     ZapparThree.glContextSet(this.renderer.instance.getContext())
   }
 

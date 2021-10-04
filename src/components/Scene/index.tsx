@@ -9,9 +9,11 @@ const Scene = () => {
   let experience = useRef<Experience>()
 
   useEffect(() => {
-    experience.current = new Experience({
-      targetElement: targetRef.current,
-    })
+    if (targetRef?.current) {
+      experience.current = new Experience({
+        targetElement: targetRef.current,
+      })
+    }
 
     return () => experience.current?.stop()
   }, [targetRef])
