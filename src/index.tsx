@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 import GlobalStyle from './config/styles'
 
-import App from './App'
+import App from './app'
 
 import reportWebVitals from './reportWebVitals'
 

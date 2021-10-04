@@ -2,6 +2,8 @@ import { useRef, useEffect } from 'react'
 
 import Experience from '../../experience'
 
+import { Container } from './styles'
+
 const Scene = () => {
   const targetRef = useRef<HTMLDivElement>(null)
   let experience = useRef<Experience>()
@@ -14,7 +16,7 @@ const Scene = () => {
     return () => experience.current?.stop()
   }, [targetRef])
 
-  return <div id="experience" ref={targetRef}></div>
+  return <Container id="experience" ref={targetRef}></Container>
 }
 
 export default Scene

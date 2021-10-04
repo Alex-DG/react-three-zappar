@@ -1,15 +1,8 @@
-# ✨ SPA - React ThreeJS with Zappar AR ✨
+# ✨ React ThreeJS with Zappar AR ✨
 
 This repository contains an AR example using the Zappar SDK.This specific example uses `react-scripts` to compile and bundle the assets and code, and TypeScript to get full auto-complete and compile-time error checking.
 
 To learn more about [Zappar AR](https://docs.zap.works/universal-ar/)
-
-## 🚧 WIP 🚧
-
-- ~~AR Camera hot reload~~
-- [React-Helmet](https://github.com/nfl/react-helmet)/custom dom head
-- ~~[Styled-Components](https://styled-components.com/)~~
-- Test
 
 ## 🏃🏼 Running the Project 🏃🏼
 
