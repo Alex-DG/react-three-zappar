@@ -93,7 +93,7 @@ class Experience {
   }
 
   private setResize() {
-    this.targetElement?.addEventListener('resize', () => {
+    window.addEventListener('resize', () => {
       const boundings = this.targetElement?.getBoundingClientRect()
       this.config.width = boundings?.width || window.innerWidth
       this.config.height = boundings?.height || window.innerHeight
