@@ -4,7 +4,7 @@ This repository contains an AR example using the Zappar SDK.This specific exampl
 
 To learn more about [Zappar AR](https://docs.zap.works/universal-ar/)
 
-## 🏃🏼 Running the Project 🏃🏼
+## Running the Project
 
 Once you have cloned this repository, open a terminal in the root directory of this project and follow these steps to get started.
 
@@ -33,3 +33,9 @@ It's recommended to launch this project on a mobile device to get the best user 
 ```bash
 npm run build
 ```
+
+## Experience
+
+- Create new 3D entity as a separate folder or file (i.e: `Face/`)
+- Instanciante your new 3D entity from the `World` class (i.e: `this.setFace()`)
+- Don't forget to update your entity in the World `update()` function if you need to
