@@ -1,7 +1,10 @@
-import React from 'react'
 import { render, screen } from '@testing-library/react'
+
 import App from '.'
 
+/**
+ * TODO: fix  Cannot find module 'worker-loader!./worker' from 'node_modules/@zappar/zappar-cv/lib/worker-client.js'
+ */
 test('renders zappar link', () => {
   render(<App />)
   const linkElement = screen.getByText(

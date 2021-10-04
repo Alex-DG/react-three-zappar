@@ -30,5 +30,9 @@ export default styled.createGlobalStyle`
   .link {
     font-size: bold;
     color: ${Color.SECONDARY};
+
+    :hover {
+      color: #000;
+    }
   }
 `

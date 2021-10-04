@@ -1,24 +1,20 @@
 import { useState } from 'react'
-import * as ZapparThree from '@zappar/zappar-threejs'
 
 import Scene from '../components/Scene'
 import Button from '../components/Button'
 
+import { ZapparPermissionRquest } from '../utils/zappar'
+
 const App = () => {
   const [granted, setGranted] = useState(false)
 
-  const handleZapparPermission = () => {
-    ZapparThree.permissionRequest().then((granted) => {
-      if (granted) setGranted(true)
-      else ZapparThree.permissionDeniedUI()
-    })
-  }
+  const handlePermission = () => ZapparPermissionRquest(setGranted)
 
   if (granted) return <Scene />
 
   return (
     <div className="app">
-      <Button onClick={handleZapparPermission}>Allow Camera</Button>
+      <Button onClick={handlePermission}>Allow Camera</Button>
 
       <a
         href="https://www.zappar.com/"
