@@ -4,6 +4,8 @@ This repository contains an AR example using the Zappar SDK.This specific exampl
 
 To learn more about [Zappar AR](https://docs.zap.works/universal-ar/)
 
+Project [DEMO](https://react-three-zappar.netlify.app/)
+
 ## Running the Project
 
 Once you have cloned this repository, open a terminal in the root directory of this project and follow these steps to get started.
