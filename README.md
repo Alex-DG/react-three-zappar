@@ -13,13 +13,13 @@ Once you have cloned this repository, open a terminal in the root directory of t
 - Install the dependencies by running:
 
 ```bash
-npm i
+yarn
 ```
 
 - Next, run the project using the following command:
 
 ```bash
-npm run start
+yarn start
 ```
 
 The `webpack server` tool will host the content locally and give you an address you can open in your browser of your local machine.
@@ -33,7 +33,7 @@ It's recommended to launch this project on a mobile device to get the best user 
 - Create optmised production build:
 
 ```bash
-npm run build
+yarn build
 ```
 
 ## Experience
