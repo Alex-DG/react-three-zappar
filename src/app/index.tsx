@@ -14,7 +14,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <Button onClick={handlePermission}>Allow Camera</Button>
+      <Button onClick={() => handlePermission()}>Allow Camera</Button>
 
       <a
         href="https://www.zappar.com/"
