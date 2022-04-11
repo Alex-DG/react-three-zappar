@@ -1825,7 +1825,7 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
   integrity sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==
 
-"@types/gl-matrix@^2.4.5":
+"@types/gl-matrix@2.4.5":
   version "2.4.5"
   resolved "https://registry.yarnpkg.com/@types/gl-matrix/-/gl-matrix-2.4.5.tgz#80630d88fb74ff8897a2a2855a8a700e6ee19d3e"
   integrity sha512-0L8Mq1+oaIW0oVzGUDbSW+HnTjCNb4CmoIQE5BkoHt/A7x20z0MJ1PnwfH3atty/vbWLGgvJwVu2Mz3SKFiEFw==
@@ -2010,15 +2010,15 @@
   dependencies:
     "@types/jest" "*"
 
-"@types/three@^0.130.0":
-  version "0.130.2"
-  resolved "https://registry.yarnpkg.com/@types/three/-/three-0.130.2.tgz#af48f897c844b3b41f649cc2642f61566332be7e"
-  integrity sha512-9rgbc2KobttgyCbaizjxUa6lfmbXSUhjcdd3TKPiG6YIr0ZkUSUuRu0q5qA72sak3gxSGSZCjV+Zuzhl/+VRjA==
+"@types/three@0.139.0":
+  version "0.139.0"
+  resolved "https://registry.yarnpkg.com/@types/three/-/three-0.139.0.tgz#69af1f0c52f8eea390f513e05478af1dd7f49e6f"
+  integrity sha512-4V/jZhyq7Mv05coUzxL3bz8AuBOSi/1F0RY7ujisHTV0Amy/fnYJ+s7TSJ1/hXjZukSkpuFRgV+wvWUEMbsMbQ==
 
-"@types/ua-parser-js@^0.7.33":
-  version "0.7.35"
-  resolved "https://registry.yarnpkg.com/@types/ua-parser-js/-/ua-parser-js-0.7.35.tgz#cca67a95deb9165e4b1f449471801e6489d3fe93"
-  integrity sha512-PsPx0RLbo2Un8+ff2buzYJnZjzwhD3jQHPOG2PtVIeOhkRDddMcKU8vJtHpzzfLB95dkUi0qAkfLg2l2Fd0yrQ==
+"@types/ua-parser-js@0.7.33":
+  version "0.7.33"
+  resolved "https://registry.yarnpkg.com/@types/ua-parser-js/-/ua-parser-js-0.7.33.tgz#4a92089511574e12928a7cb6b99a01831acd1dd7"
+  integrity sha512-ngUKcHnytUodUCL7C6EZ+lVXUjTMQb+9p/e1JjV5tN9TVzS98lHozWEFRPY1QcCdwFeMsmVWfZ3DPPT/udCyIw==
 
 "@types/uglify-js@*":
   version "3.11.1"
@@ -2330,31 +2330,31 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"@zappar/zappar-cv@^0.3.11":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@zappar/zappar-cv/-/zappar-cv-0.3.12.tgz#32995ce78fe402357847d58e4deb80933591e844"
-  integrity sha512-mNEfCED2ZvOowsHtCEThEtJCh5Ba0DFo2EVUdtIWWC7cG4bctn9ScdZC/DbFbMUCwWZ3mpDl4Z2Sgs+RifUY7Q==
+"@zappar/zappar-cv@0.3.16":
+  version "0.3.16"
+  resolved "https://registry.yarnpkg.com/@zappar/zappar-cv/-/zappar-cv-0.3.16.tgz#0dcc0ec0bbcf06e049a2a6735c228a8ed8435e86"
+  integrity sha512-y1nqOJkKgppSrA1aUqOwITLQRKx9M1cWKs/b7greM4O9eQZGl2M9XDhC7f4KsfpvLaB+0VU9AZ1ngrTidTjBmQ==
   dependencies:
-    "@types/gl-matrix" "^2.4.5"
-    "@types/ua-parser-js" "^0.7.33"
-    file-loader "^6.2.0"
+    "@types/gl-matrix" "2.4.5"
+    "@types/ua-parser-js" "0.7.33"
+    file-loader "6.2.0"
     gl-matrix "3.1.0"
-    ua-parser-js "^0.7.21"
-    worker-loader "^3.0.5"
+    ua-parser-js "0.7.30"
+    worker-loader "3.0.5"
 
-"@zappar/zappar-threejs@^0.3.32":
-  version "0.3.32"
-  resolved "https://registry.yarnpkg.com/@zappar/zappar-threejs/-/zappar-threejs-0.3.32.tgz#ab89dc58bf38b6fcb5239aaab458f7ce51577d82"
-  integrity sha512-IsLLOjW2bLiqi9V5rEKGe/tC0r6G7XTUvMxy9O5lRNiLCVuPbrXW8Zw9E2VG8saYKYfzINEUGJiWgoNaDu8rGQ==
+"@zappar/zappar-threejs@0.3.40":
+  version "0.3.40"
+  resolved "https://registry.yarnpkg.com/@zappar/zappar-threejs/-/zappar-threejs-0.3.40.tgz#5a2e465b9d0e49c1ae3b5cf928945b95810f902f"
+  integrity sha512-fblO+vPznd0vzC5BuZEYqUCpRrDzUUXz6LFsofJ7G37mzdMjyOIKIV5ywwK5wzssA2LiQl/jUVPYOIxaUu0o6g==
   dependencies:
-    "@zappar/zappar" "^0.3.14"
+    "@zappar/zappar" "0.3.17"
 
-"@zappar/zappar@^0.3.14":
-  version "0.3.14"
-  resolved "https://registry.yarnpkg.com/@zappar/zappar/-/zappar-0.3.14.tgz#1929d175f7152a6983cf133d1a6bee4025b6cb63"
-  integrity sha512-07n8PBoY7dR+0XZPmtxCP3OcjOX9hq3IzyVZjaDudNxOwePX88SwdJiDR6tp8lGV/ByE+3HpWsCzCWwAXwp99w==
+"@zappar/zappar@0.3.17":
+  version "0.3.17"
+  resolved "https://registry.yarnpkg.com/@zappar/zappar/-/zappar-0.3.17.tgz#75d3a50caee6cca72b55fcec3562dae605c006ee"
+  integrity sha512-uDCbaH7IsiSZzrJ11QEvGcKppc2ulqRohUcEOcwWN5svvu+Cs+elJcCLdfZ18sBUzs1TZ2FEJ4tm/1etcu3Pbw==
   dependencies:
-    "@zappar/zappar-cv" "^0.3.11"
+    "@zappar/zappar-cv" "0.3.16"
 
 abab@^2.0.3:
   version "2.0.5"
@@ -5173,7 +5173,7 @@ file-loader@6.1.1:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
 
-file-loader@^6.2.0:
+file-loader@6.2.0:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-6.2.0.tgz#baef7cf8e1840df325e4390b4484879480eebe4d"
   integrity sha512-qo3glqyTa61Ytg4u73GultjHGjdRyig3tG6lPtyX/jOEJvHif9uB0/OCI2Kif6ctF3caQTW2G5gym21oAsI4pw==
@@ -10740,10 +10740,10 @@ text-table@0.2.0, text-table@^0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
-three@^0.132.2:
-  version "0.132.2"
-  resolved "https://registry.yarnpkg.com/three/-/three-0.132.2.tgz#95eb1856147237c03e887cbbe56f964b6fb40b5e"
-  integrity sha512-0wcR7LxxkXMn6Gi58gEs3QvY8WpTVXA31L2VOvpjm4ZPYFRHCZC13UqynheFoS5OXDYgtBneN0dhbaNBE8iLhQ==
+three@0.139.0:
+  version "0.139.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.139.0.tgz#4805eeb4cde85d8a82b6048088230f8ce5b75375"
+  integrity sha512-hZ4LkCjgoEM82WLaOVptDKGpB3SkEyuJP2OHe36AFO8hS2I6CrEiNanXj7wwR3wIPT7V5wi5Y5pFnncS5SVHgQ==
 
 throat@^5.0.0:
   version "5.0.0"
@@ -10979,10 +10979,10 @@ typescript@^4.3.5:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.3.tgz#bdc5407caa2b109efd4f82fe130656f977a29324"
   integrity sha512-4xfscpisVgqqDfPaJo5vkd+Qd/ItkoagnHpufr+i2QCHBsNYp+G7UAoyFl8aPtx879u38wPV65rZ8qbGZijalA==
 
-ua-parser-js@^0.7.21:
-  version "0.7.24"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.24.tgz#8d3ecea46ed4f1f1d63ec25f17d8568105dc027c"
-  integrity sha512-yo+miGzQx5gakzVK3QFfN0/L9uVhosXBBO7qmnk7c2iw1IhL212wfA3zbnI54B0obGwC/5NWub/iT9sReMx+Fw==
+ua-parser-js@0.7.30:
+  version "0.7.30"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.30.tgz#4cf5170e8b55ac553fe8b38df3a82f0669671f0b"
+  integrity sha512-uXEtSresNUlXQ1QL4/3dQORcGv7+J2ookOG2ybA/ga9+HYEXueT2o+8dUJQkpedsyTyCJ6jCCirRcKtdtx1kbg==
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
@@ -11624,10 +11624,10 @@ worker-farm@^1.7.0:
   dependencies:
     errno "~0.1.7"
 
-worker-loader@^3.0.5:
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/worker-loader/-/worker-loader-3.0.8.tgz#5fc5cda4a3d3163d9c274a4e3a811ce8b60dbb37"
-  integrity sha512-XQyQkIFeRVC7f7uRhFdNMe/iJOdO6zxAaR3EWbDp45v3mDhrTi+++oswKNxShUNjPC/1xUp5DB29YKLhFo129g==
+worker-loader@3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/worker-loader/-/worker-loader-3.0.5.tgz#6e13a583c4120ba419eece8e4f2e098b014311bf"
+  integrity sha512-cOh4UqTtvT8eHpyuuTK2C66Fg/G5Pb7g11bwtKm7uyD0vj2hCGY1APlSzVD75V9ciYZt44VPbFPiSFTSLxkQ+w==
   dependencies:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
