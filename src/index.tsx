@@ -1,18 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-
-import GlobalStyle from './config/styles'
-
-import App from './app'
+import { createRoot } from 'react-dom/client'
 
 import reportWebVitals from './reportWebVitals'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <GlobalStyle />
+import App from './app'
+import GlobalStyling from './config/styles'
+
+const rootElement = document.getElementById('root') as HTMLDivElement
+const root = createRoot(rootElement)
+root.render(
+  <>
+    {/** @ts-ignore */}
+    <GlobalStyling />
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </>
 )
 
 // If you want to start measuring performance in your app, pass a function

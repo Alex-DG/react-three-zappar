@@ -6,7 +6,7 @@ const fullStyling = styled.css`
   height: 100%;
 `
 
-export default styled.createGlobalStyle`
+const GlobalStyling = styled.createGlobalStyle`
   html,
   body,
   #root {
@@ -36,3 +36,4 @@ export default styled.createGlobalStyle`
     }
   }
 `
+export default GlobalStyling
