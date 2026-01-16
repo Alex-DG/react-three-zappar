@@ -1,0 +1,52 @@
+{
+  "name": "cra",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "5.16.4",
+    "@testing-library/react": "13.0.0",
+    "@testing-library/user-event": "14.1.0",
+    "@types/jest": "27.4.1",
+    "@types/node": "17.0.23",
+    "@types/react": "18.0.0",
+    "@types/react-dom": "18.0.0",
+    "@types/three": "0.139.0",
+    "@zappar/zappar-threejs": "0.3.40",
+    "react": "18.0.0",
+    "react-app-rewired": "^2.1.8",
+    "react-dom": "18.0.0",
+    "react-scripts": "4.0.3",
+    "styled-components": "^5.3.1",
+    "three": "0.139.0",
+    "typescript": "^4.3.5",
+    "web-vitals": "2.1.0"
+  },
+  "scripts": {
+    "start": "NODE_OPTIONS=--openssl-legacy-provider HTTPS=true react-app-rewired start",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider react-app-rewired build",
+    "test": "NODE_OPTIONS=--openssl-legacy-provider react-app-rewired test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "homepage": ".",
+  "devDependencies": {
+    "@types/styled-components": "^5.1.14"
+  }
+}
